@@ -18,11 +18,11 @@ body {
 /* Fuente custom */
 @font-face {
   font-family: "Porkys";
-  src: url("assets/porkys.woff2") format("woff2"),
-    url("assets/porkys.woff") format("woff");
+  src: url("assets/Porkys.woff2") format("woff2"),
+    url("assets/Porkys.woff") format("woff"),
+    url("assets/PORKYS_.TTF") format("truetype");
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
 }
 
 /* === NAVBAR === */
