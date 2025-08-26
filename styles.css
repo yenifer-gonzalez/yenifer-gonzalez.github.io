@@ -1,0 +1,468 @@
+:root {
+  --nav-h: 90px; /* altura del nav */
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: var(--nav-h);
+}
+
+body {
+  background-color: #fef7f2;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #5c4a3e;
+}
+
+/* Fuente custom */
+@font-face {
+  font-family: "Porkys";
+  src: url("assets/PORKYS_.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* === NAVBAR === */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: var(--nav-h);
+  position: fixed;
+  background-color: #fef7f2;
+  z-index: 100;
+  box-shadow: 7px 7px 15px -2px rgba(92, 74, 62, 0.05);
+}
+
+a {
+  text-decoration: none;
+}
+
+.heart {
+  max-width: 30px;
+  width: 100%;
+  height: auto;
+}
+
+.header-name {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 30px;
+}
+
+.name a {
+  color: #5c4a3e;
+  font-weight: 800;
+  letter-spacing: 3px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  align-items: center;
+}
+
+.header-nav a {
+  color: #5c4a3e;
+  font-weight: 800;
+}
+
+.header-nav a:hover {
+  color: #e7d4c0;
+}
+
+/* Botón contact */
+.btn-contact {
+  display: inline-block;
+  background-color: #f3cdd1;
+  font-size: medium;
+  padding: 10px 30px;
+  border-radius: 12px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.header-nav .btn-contact:hover {
+  background-color: #e7d4c0;
+  color: #5c4a3e;
+}
+
+/* === HOME / PORTADA === */
+.home {
+  min-height: 100dvh;
+  background-image: url("assets/home.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* === ABOUT === */
+#about {
+  min-height: calc(100dvh - var(--nav-h));
+  display: grid;
+  place-items: center;
+  padding-block: 24px;
+}
+
+/* Caja principal */
+.about-box {
+  background-color: #fff;
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(92, 74, 62, 0.1);
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Layout interno */
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px 32px;
+  gap: 30px;
+}
+
+.about-img {
+  width: 100%;
+  max-width: 350px;
+}
+
+.about-left,
+.about-right {
+  flex: 1 1 400px;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.details-wrapper {
+  margin-top: 15px;
+}
+
+.about-right {
+  padding-top: 0;
+}
+
+.about-right p {
+  text-align: justify;
+  line-height: 1.6;
+  padding-bottom: 16px;
+}
+
+.about-container h3 {
+  font-size: 50px;
+  font-family: "Porkys", cursive;
+  margin: 0px;
+  letter-spacing: 10px;
+}
+
+/* Info de ubicación / fecha */
+.detail-info {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.detail-info p {
+  font-weight: 600;
+  margin: 0;
+}
+
+.about-icon {
+  height: 30px;
+  width: auto;
+}
+
+/* Nombre destacado */
+.name-intro {
+  color: #f3cdd1;
+}
+
+.interests {
+  font-size: 18px;
+  font-weight: 800;
+  text-align: center;
+  color: #f3cdd1;
+  margin-top: 20px;
+  letter-spacing: 1px;
+}
+
+/* Títulos generales */
+h3 {
+  font-family: "Porkys", cursive;
+  font-size: 50px;
+  letter-spacing: 8px;
+  color: #5c4a3e;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.education p,
+.experience p {
+  position: relative;
+  padding-left: 28px;
+  margin: 6px 0;
+  color: #5c4a3e;
+}
+
+.education p::before,
+.experience p::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  width: 18px;
+  height: 18px;
+  background-image: url("assets/heart.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* === RESUME === */
+#resume {
+  min-height: calc(100dvh - var(--nav-h));
+  display: grid;
+  place-items: center;
+  padding: 24px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 32px;
+  background-color: #fff;
+  padding: 32px 40px;
+  border-radius: 16px;
+  box-shadow: 0px 4px 20px rgba(92, 74, 62, 0.1);
+}
+
+.resume-img {
+  width: 360px;
+  height: auto;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Subtítulos */
+.resume-left h3,
+.resume-right h3 {
+  font-family: "Porkys", cursive;
+  font-size: 32px;
+  letter-spacing: 4px;
+  margin: 6px 0 12px;
+  color: #5c4a3e;
+  text-align: left;
+  position: relative;
+}
+
+/* Línea decorativa debajo de subtítulos */
+.resume-left h3::after,
+.resume-right h3::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 4px;
+  background: #f3cdd1;
+  border-radius: 999px;
+  margin-top: 8px;
+  opacity: 0.8;
+}
+
+.resume-left p,
+.resume-right p,
+.resume-left li {
+  font-size: 15px;
+  line-height: 1.65;
+  color: #5c4a3e;
+}
+
+.resume-left ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+/* Sección skills */
+.skills-section {
+  margin-bottom: 26px;
+}
+
+.skills-section h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 10px 0 12px;
+  color: #5c4a3e;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Contenedor badges */
+.skill-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+/* Íconos de skills */
+.skills-section img {
+  height: 20px;
+  width: auto;
+  margin-right: 6px;
+  filter: invert(46%) sepia(17%) saturate(386%) hue-rotate(330deg)
+    brightness(92%) contrast(90%);
+}
+
+.badge {
+  background: rgba(92, 74, 62, 0.06);
+  color: #5c4a3e;
+  border: 1px solid rgba(92, 74, 62, 0.12);
+  padding: 6px 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.15s ease, background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+.badge:hover {
+  background: #f3cdd1;
+  border-color: #f3cdd1;
+  transform: translateY(-1px);
+}
+
+/* === CONTACT === */
+#contact {
+  min-height: calc(100dvh - var(--nav-h));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 40px;
+}
+
+/* Imagen título */
+.contact-header {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+
+.contact-title {
+  width: 500px;
+  height: auto;
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* Caja formulario */
+.contact-box {
+  background: #fff;
+  padding: 56px 40px 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(92, 74, 62, 0.1);
+  max-width: 700px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+/* Texto introductorio */
+.contact-intro {
+  font-weight: 500;
+  font-size: 15px;
+  color: #5c4a3e;
+  margin-bottom: 24px;
+}
+
+/* Formulario */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Inputs */
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: #5c4a3e;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #e7d4c0;
+  border-radius: 10px;
+  font-family: inherit;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  box-sizing: border-box;
+}
+
+/* Focus en inputs */
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #f3cdd1;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(243, 205, 209, 0.3);
+}
+
+/* Botón enviar */
+.btn-contact-form {
+  background: #f3cdd1;
+  border: none;
+  color: #5c4a3e;
+  font-size: 15px;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.btn-contact-form:hover {
+  background: #e7d4c0;
+  transform: translateY(-2px);
+}
+
+/* Redes sociales */
+.social-links {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.social-links img {
+  width: 28px;
+  height: 28px;
+  filter: invert(75%) sepia(12%) saturate(350%) hue-rotate(320deg)
+    brightness(95%) contrast(90%);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.social-links img:hover {
+  transform: translateY(-3px);
+  filter: invert(86%) sepia(18%) saturate(500%) hue-rotate(320deg)
+    brightness(105%) contrast(95%);
+}
